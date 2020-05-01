@@ -7,7 +7,6 @@ module Embulk
           @args = args
           Koala.config.api_version = "v6.0"
           @graph = Koala::Facebook::API.new(@args[:access_token])
-          get_campaign_insights
         end
 
         def get_campaign_ids

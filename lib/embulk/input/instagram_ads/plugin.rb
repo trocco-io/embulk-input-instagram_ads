@@ -42,7 +42,7 @@ module Embulk
           datas = GraphApiClient.new(task).get_campaign_ids
           datas.each do |row|
             page_builder.add(
-              task[:columns].map { |c| row[c["name"].to_sym] }
+              task[:columns].map { |c| row[c["name"]] }
             )
           end
           page_builder.finish
